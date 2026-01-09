@@ -1,0 +1,330 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11178,        322]
+NotebookOptionsPosition[      9759,        290]
+NotebookOutlinePosition[     10156,        306]
+CellTagsIndexPosition[     10113,        303]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "The goal of this exercise is to study transport across a Fibonacci chain.\n\
+This is a chain where the on-site energies change in a quasi-periodic fashion \
+according to what is called a Fibonacci string.\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "1"], "=", "A"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c1349776-3e81-4809-900f-6d632a1febb6"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "2"], "=", "AB"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7597ea23-c954-44d8-934f-588ed2ad6aee"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", 
+     RowBox[{"n", "+", "1"}]], "=", 
+    RowBox[{
+     SubscriptBox["S", "n"], "+", 
+     SubscriptBox["S", 
+      RowBox[{"n", "-", "1"}]]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "07947bd8-6350-453d-8939-8b84c3a67741"],
+ "\n\nso \n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "1"], "=", "A"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "178f7ed6-317d-4244-814b-e42b9f5eceb3"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "2"], "=", "AB"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "36034a90-3446-4122-8813-fdc9b9816924"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "3"], "=", "ABA"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "cd5b6b0b-3b9d-4f63-92b4-a1a14296f57c"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "4"], "=", "ABAAB"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b1692662-6060-435a-8863-6f5d878131c5"],
+ "\netc.\n\nThe Fibonacci string is not random. It is quasi-periodic. \nAnd \
+this has a big influence on how an excitation propagates along the chain. "
+}], "Text",
+ CellChangeTimes->{{3.9768666784069357`*^9, 3.976866736152234*^9}, {
+  3.9768667972140923`*^9, 
+  3.9768668862692432`*^9}},ExpressionUUID->"afd25b86-7523-4cb4-8c82-\
+7825b633885e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"fibonacciString", "[", "50", "]"}]], "Input",
+ CellChangeTimes->{{3.976866856060423*^9, 3.976866856147756*^9}},
+ CellLabel->
+  "In[2261]:=",ExpressionUUID->"fadda756-41d0-4c15-8c7e-8aa2b64bdbb9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", 
+   ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+   "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", 
+   ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", 
+   "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", 
+   ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+   "0", ",", "1", ",", "0", ",", "1", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.976866856488361*^9},
+ CellLabel->
+  "Out[2261]=",ExpressionUUID->"b7fc566b-5e67-4b4b-b7c9-bf834750e6c6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"L", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Epsilon]", " ", "=", " ", 
+   RowBox[{"fibonacciString", "[", "L", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"TightBindingHamiltonian", "[", 
+     RowBox[{"L", ",", "\[Epsilon]", ",", "1.0"}], "]"}], "//", "mf"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.976866546432325*^9, 3.976866587172119*^9}, {
+  3.9768666329701366`*^9, 3.976866642117353*^9}, {3.9768668932497053`*^9, 
+  3.976866895584793*^9}, {3.976867047120913*^9, 3.97686704788857*^9}},
+ CellLabel->
+  "In[2271]:=",ExpressionUUID->"1f3cd230-4388-4b29-a873-3822f55015e5"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", 
+      RowBox[{"-", "1.`"}], "0", "0", "0", "0", "0", "0", "0", "0"},
+     {
+      RowBox[{"-", "1.`"}], "1.`", 
+      RowBox[{"-", "1.`"}], "0", "0", "0", "0", "0", "0", "0"},
+     {"0", 
+      RowBox[{"-", "1.`"}], "0", 
+      RowBox[{"-", "1.`"}], "0", "0", "0", "0", "0", "0"},
+     {"0", "0", 
+      RowBox[{"-", "1.`"}], "0", 
+      RowBox[{"-", "1.`"}], "0", "0", "0", "0", "0"},
+     {"0", "0", "0", 
+      RowBox[{"-", "1.`"}], "1.`", 
+      RowBox[{"-", "1.`"}], "0", "0", "0", "0"},
+     {"0", "0", "0", "0", 
+      RowBox[{"-", "1.`"}], "0", 
+      RowBox[{"-", "1.`"}], "0", "0", "0"},
+     {"0", "0", "0", "0", "0", 
+      RowBox[{"-", "1.`"}], "1.`", 
+      RowBox[{"-", "1.`"}], "0", "0"},
+     {"0", "0", "0", "0", "0", "0", 
+      RowBox[{"-", "1.`"}], "0", 
+      RowBox[{"-", "1.`"}], "0"},
+     {"0", "0", "0", "0", "0", "0", "0", 
+      RowBox[{"-", "1.`"}], "0", 
+      RowBox[{"-", "1.`"}]},
+     {"0", "0", "0", "0", "0", "0", "0", "0", 
+      RowBox[{"-", "1.`"}], "1.`"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   SparseArray[
+    Automatic, {10, 10}, 0, {
+     1, {{0, 1, 4, 6, 8, 11, 13, 16, 18, 20, 22}, {{2}, {2}, {1}, {3}, {2}, {
+       4}, {5}, {3}, {5}, {6}, {4}, {7}, {5}, {7}, {8}, {6}, {9}, {7}, {10}, {
+       8}, {10}, {9}}}, {-1., 1., -1., -1., -1., -1., -1., -1., 
+      1., -1., -1., -1., -1., 1., -1., -1., -1., -1., -1., -1., 
+      1., -1.}}]]]]], "Print",
+ CellChangeTimes->{
+  3.9768666424176197`*^9, {3.976866893464665*^9, 3.976866895942039*^9}, 
+   3.976867048230934*^9},
+ CellLabel->
+  "During evaluation of \
+In[2271]:=",ExpressionUUID->"08e1f0c0-59e4-4013-ac8f-38e8c0435823"]
+}, Open  ]],
+
+Cell["You can construct vectors and matrices as ", "Text",
+ CellChangeTimes->{{3.9768669025975437`*^9, 
+  3.976866907977644*^9}},ExpressionUUID->"114735fd-7ae3-42e2-93f7-\
+048de7f194ea"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Basis", "[", 
+    RowBox[{"L", ",", "3"}], "]"}], "//", "mf"}], ";"}]], "Input",
+ CellChangeTimes->{{3.976866908721354*^9, 3.976866911162054*^9}},
+ CellLabel->
+  "In[2268]:=",ExpressionUUID->"6fe5f4bb-029e-4ab3-9727-a2c540b5829c"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {"0"},
+      {"0"},
+      {"1"},
+      {"0"},
+      {"0"},
+      {"0"},
+      {"0"},
+      {"0"},
+      {"0"},
+      {"0"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    Column], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Print",
+ CellChangeTimes->{3.976866911380458*^9},
+ CellLabel->
+  "During evaluation of \
+In[2268]:=",ExpressionUUID->"16888b83-08e2-46be-a20b-21c49d4d386f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Proj", "[", 
+    RowBox[{"L", ",", "1", ",", "2"}], "]"}], "//", "mf"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9768669126760073`*^9, 3.9768669194238*^9}},
+ CellLabel->
+  "In[2270]:=",ExpressionUUID->"21f08235-4bd9-4d6f-9bc0-092d8f2b7c2d"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "1", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   SparseArray[
+    Automatic, {10, 10}, 0, {
+     1, {{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {{2}}}, {1}}]]]]], "Print",
+ CellChangeTimes->{{3.976866917418716*^9, 3.9768669195804377`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[2270]:=",ExpressionUUID->"48780337-85b2-4bde-ab48-7580ee1a5920"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Exercise: construct a master equation that describes how an \
+excitation propagates along the chain. \n",
+  FontWeight->"Bold"],
+ "Explore \[Lambda] (the strength of the Fibonacci modulation) and the \
+dissipation rates of the master equation.\nExplore sizes on the order of 10 \
+or 20."
+}], "Text",
+ CellChangeTimes->{{3.976866983066675*^9, 3.976867005632566*^9}, {
+  3.97686815817325*^9, 
+  3.976868210659827*^9}},ExpressionUUID->"824d2fc0-0c47-44e2-9fb5-\
+2fa361a4b760"]
+},
+WindowSize->{808, 795},
+WindowMargins->{{Automatic, -6}, {Automatic, 23}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"355405c5-abfb-453b-a650-f5a8aa2b9df6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2071, 63, 398, "Text",ExpressionUUID->"afd25b86-7523-4cb4-8c82-7825b633885e"],
+Cell[CellGroupData[{
+Cell[2654, 87, 219, 4, 30, "Input",ExpressionUUID->"fadda756-41d0-4c15-8c7e-8aa2b64bdbb9"],
+Cell[2876, 93, 706, 12, 56, "Output",ExpressionUUID->"b7fc566b-5e67-4b4b-b7c9-bf834750e6c6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3619, 110, 703, 16, 73, "Input",ExpressionUUID->"1f3cd230-4388-4b29-a873-3822f55015e5"],
+Cell[4325, 128, 2023, 54, 176, "Print",ExpressionUUID->"08e1f0c0-59e4-4013-ac8f-38e8c0435823"]
+}, Open  ]],
+Cell[6363, 185, 186, 3, 35, "Text",ExpressionUUID->"114735fd-7ae3-42e2-93f7-048de7f194ea"],
+Cell[CellGroupData[{
+Cell[6574, 192, 277, 7, 30, "Input",ExpressionUUID->"6fe5f4bb-029e-4ab3-9727-a2c540b5829c"],
+Cell[6854, 201, 774, 29, 176, "Print",ExpressionUUID->"16888b83-08e2-46be-a20b-21c49d4d386f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7665, 235, 286, 7, 30, "Input",ExpressionUUID->"21f08235-4bd9-4d6f-9bc0-092d8f2b7c2d"],
+Cell[7954, 244, 1286, 30, 176, "Print",ExpressionUUID->"48780337-85b2-4bde-ab48-7580ee1a5920"]
+}, Open  ]],
+Cell[9255, 277, 500, 11, 81, "Text",ExpressionUUID->"824d2fc0-0c47-44e2-9fb5-2fa361a4b760"]
+}
+]
+*)
+

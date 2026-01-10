@@ -1,0 +1,167 @@
+\documentclass{article}
+
+\usepackage{microtype}
+\usepackage{mathtools}
+
+\usepackage{enumitem}
+\usepackage{amsthm}
+\newtheorem{exercise}{Exercise}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\newcommand{\tens}{\otimes}
+\DeclareMathOperator{\Tr}{Tr}
+
+\title{Exercises: Quantum Information IV}
+\author{Texas Winter Quantum School}
+\date{2026-01-07}
+
+\begin{document}
+
+\maketitle
+
+\begin{exercise}[Quantum mutual information]
+The \emph{mutual information} measures correlations, both quantum and
+classical, in a bipartite state $\rho_{AB}$, and is defined as
+\begin{equation}
+    I(A:B) = 
+        \min_{\sigma_A, \sigma_B}{
+            D(\rho_{AB} \Vert \sigma_A \tens \sigma_B)
+        };
+\end{equation}
+it measures how far $\rho_{AB}$ is from a product state.
+
+Show that 
+\begin{enumerate}[label=(\alph*)]
+    \item $I(A: B) = D(\rho_{AB} \Vert \rho_A \tens \rho_B)$;
+    \item $I(A:B) = S(\rho_A) + S(\rho_B) - S(\rho_{AB})$.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+(a) Recall that the relative entropy
+\begin{equation}
+    D(\rho \Vert \sigma) = 
+    \Tr{\left[ \rho \log{\rho} - \rho \log{\sigma} \right]},
+\end{equation}
+so
+\begin{equation}
+    I(A:B) = 
+    \min_{\sigma_A, \sigma_B}
+         {\Tr{\left(\rho_{AB} \log{\rho_{AB}} - 
+          \rho_{AB} \log{\sigma_A \tens \sigma_B}\right)}
+         }.
+\end{equation}
+We can add and subtract the same thing:
+\begin{equation}
+\begin{split}
+    I(A:B) &= 
+    \min_{\sigma_A, \sigma_B}{
+        \Tr{[
+        \rho_{AB} \log{\rho_{AB}} - 
+        \rho_{AB} \log{(\sigma_A \tens \sigma_B)}
+        ]}
+    } \\ &\qquad+
+    \min_{\sigma_A, \sigma_B}
+        {\Tr{[
+        \rho_{AB} \log{(\rho_A \tens \rho_B)} -
+        \rho_{AB} \log{(\rho_A \tens \rho_B)}
+        ]}
+    } \\ &=
+    \Tr{[
+    \rho_{AB} \log{\rho_{AB}} - 
+    \rho_{AB} \log{(\rho_A \tens \rho_B)}
+    ]} \\ &\qquad+
+    \min_{\sigma_A, \sigma_B}
+         {\Tr{[
+         \rho_{AB} \log{(\rho_A \tens \rho_B)} - 
+         \rho_{AB} \log{(\sigma_A \tens \sigma_B)}
+         ]}}.
+\end{split}
+\end{equation}
+Consider the terms in the minimization. We make use of the identity
+\begin{equation}
+    \Tr{[A_{AB} \log{(B_A \tens B_B)}]} = 
+    \Tr{[A_{AB} \log{B_A}]} + \Tr{[A_{AB} \log{B_B}]}
+\end{equation}
+to observe that
+\begin{multline}
+    \min_{\sigma_A, \sigma_B}
+         {\Tr{[
+         \rho_{AB} \log{(\rho_A \tens \rho_B)} - 
+         \rho_{AB} \log{(\sigma_A \tens \sigma_B)}
+         ]}} = \\
+    \min_{\sigma_A}
+        {\Tr{[
+        \rho_{AB} \log{\rho_A} - \rho_{AB} \log{\sigma_A}]}} + \\
+    \min_{\sigma_B}
+        {\Tr{[
+        \rho_{AB} \log{\rho_A} - \rho_{AB} \log{\sigma_B}
+        ]}
+    };
+\end{multline}
+next, we note that we may take partial traces in sequence,
+\begin{equation}
+    \Tr{A_{AB}} = \Tr_A{[\Tr_B{A_{AB}}]} = \Tr_B{[\Tr_A{A_{AB}}]},
+\end{equation}
+and that $\Tr_A{\rho_{AB}} = \rho_B$, $\Tr_B{\rho_{AB}} = \rho_A$.
+This yields
+\begin{multline}
+    \min_{\sigma_A}
+        {\Tr{[
+        \rho_{AB} \log{\rho_A} - \rho_{AB} \log{\sigma_A}]}} = \\
+    \min_{\sigma_A}
+        {\Tr_A{[
+            \Tr_B{(
+            \rho_{AB} \log{\rho_A} - 
+            \rho_{AB} \log{\sigma_A}
+            )}
+        ]}
+    } = \\
+    \min_{\sigma_A}{
+        \Tr_A{[
+            \rho_A \log{\rho_A} - \rho_A \log{\sigma_A}
+        ]}
+    }.
+\end{multline}
+This is the minimum over $\sigma_A$ of the relative entropy
+$D(\rho_A \Vert \sigma_A) \geq 0$; it attains its minimum when
+$\sigma_A = \rho_A$, which is contained in the set of allowable
+$\sigma_A$, so this term vanishes. 
+
+By the same logic, the minimization over $\sigma_B$ also yields zero, and we are left with
+\begin{equation}
+    I(A:B) = 
+    \Tr{[
+        \rho_{AB} \log{\rho_{AB}} - 
+        \rho_{AB} \log{(\rho_A \tens \rho_B)}
+    ]},
+\end{equation}
+which we recognize as $D(\rho_{AB} \Vert \rho_A \tens \rho_B)$.
+
+(b) We use the same trace identity to rewrite
+\begin{equation}
+    I(A:B) = 
+    \Tr{[\rho_{AB} \log{\rho_{AB}}]} -
+    \Tr{[\rho_{AB} \log{\rho_A}]} -
+    \Tr{[\rho_{AB} \log{\rho_B}]}.
+\end{equation}
+Recalling that the entropy is defined as
+$S(\rho) = \Tr{[\rho \log{\rho}]}$, we immediately recognize the
+first term as $-S(\rho_{AB})$. For the second term, we perform the
+partial trace over $B$ first to see that
+\begin{equation}
+\begin{split}
+    -\Tr{[\rho_{AB} \log{\rho_A}]} &= 
+    -\Tr_A{[\Tr_B{(\rho_{AB}) \log{\rho_A}}]} =
+    -\Tr_A{[\rho_A \log{\rho_A}]} \\ &=
+    +S(\rho_A);
+\end{split}
+\end{equation}
+by an exactly analogous argument, $-\Tr{[\rho_{AB} \log{\rho_B}]} = S(\rho_B)$. So we obtain
+\begin{equation}
+    I(A:B) = S(\rho_A) + S(\rho_B) - S(\rho_{AB}),
+\end{equation}
+as desired.
+\end{solution}
+
+\end{document}

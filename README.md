@@ -1,5 +1,7 @@
 # Texas Quantum Winter School
-This repository contains information and materials associated with the **Texas Quantum Winter School**, an intensive educational program focused on open quantum systems and quantum information in the chemical sciences.
+This repository contains information and materials associated with the 
+**Texas Quantum Winter School**, an intensive educational program focused on open 
+quantum systems and quantum information in the chemical sciences.
 
 **Official website:** https://www.texquantum.com
 
@@ -9,9 +11,13 @@ This repository contains information and materials associated with the **Texas Q
 
 ## Program Description
 
-The **Texas Quantum Winter School** is a week-long school designed to provide early-career researchers with a rigorous introduction to theoretical and computational approaches for open quantum systems, quantum dynamics, and quantum information concepts relevant to chemical physics.
+The **Texas Quantum Winter School** is a week-long school designed to provide 
+early-career researchers with a rigorous introduction to theoretical and computational 
+approaches for open quantum systems, quantum dynamics, and quantum information concepts 
+relevant to chemical physics.
 
-The program emphasizes foundational theory, practical tools, and close interaction between participants and instructors.
+The program emphasizes foundational theory, practical tools, and close interaction 
+between participants and instructors.
 
 - **Location:** Wimberley, Texas, USA  
 - **Dates:** January 4–9, 2026  
@@ -22,7 +28,8 @@ The school is supported by the **National Science Foundation (NSF)**.
 
 ## Lecturers
 
-Instruction is provided by researchers with expertise in open quantum systems, quantum information, and chemical physics.
+Instruction is provided by researchers with expertise in open quantum systems, quantum 
+information, and chemical physics.
 
 * Prof. Ignacio Franco (U Rochester) - Open Quantum Systems
 * Prof. Eric Bittner (U Houston) - Quantum Light
@@ -36,97 +43,79 @@ Instruction is provided by researchers with expertise in open quantum systems, q
 ## Talk Schedule
 
 * **Monday, January 5th**
-  * Talk 1: Quantum Information Lecture 1 [Density Matrices]
-  * Talk 2: Quantum Information Lecture 2 [Quantum Channels]
-  * Talk 3: Quantum Computing Lecture 1 [Spin-Spin Decoherence]
-  * Talk 4: Quantum Computing Lecture 2 [Adapting Central Spin Problem]
+  * Talk 1: Quantum Information Lecture 1 [Prof. Gabriel Landi]
+    * Subtopic: Density Matrices
+    * Description: 
+  * Talk 2: Quantum Information Lecture 2 [Prof. Gabriel Landi]
+    * Subtopic: Quantum Channels
+    * Description: 
+  * Talk 3: Quantum Computing Lecture 1 [Prof. Kade Head-Marsden]
+    * Subtopic: Spin-Spin Decoherence
+    * Description: 
+  * Talk 4: Quantum Computing Lecture 2 [Prof. Kade Head-Marsden]
+    * Subtopic: Adapting Central Spin Problem
+    * Description: 
 
 
 * **Tuesday, January 6th**
-  * Talk 5: Quantum Information Lecture 3 [Lindblad Equations]
-  * Talk 6: Quantum Light Lecture 1 [Intro Non-Linear Optics]
-  * Talk 7: Open Quantum Systems Lecture 1 [Quantum Master Equations (HEOM)]
-  * Talk 8: Quantum Light Lecture 2 [Stochastic Processes]
+  * Talk 5: Quantum Information Lecture 3 [Prof. Gabriel Landi]
+    * Subtopic: Lindblad Equations
+    * Description:
+  * Talk 6: Quantum Light Lecture 1 [Prof. Ajay Kandada]
+    * Subtopic: Intro Non-Linear Optics
+    * Description: 
+  * Talk 7: Open Quantum Systems Lecture 1 [Prof. Ignacio Franco]
+    * Subtopic: Quantum Master Equations (HEOM)
+    * Description: 
+  * Talk 8: Quantum Light Lecture 2 [Prof. Eric Bittner]
+    * Subtopic: Stochastic Processes
+    * Description: 
 
 
 * **Wednesday, January 7th**
-  * Talk 9: Quantum Information Lecture 4 [Correlation/Entropy/Entanglement]
-  * Talk 10: Open Quantum Systems Lecture 2 [Stochastic Methods in a Coherent State Basis]
-  * Talk 11: Open Quantum Systems Lecture 3 [HEOM and pytenso]
-  * Talk 12: Quantum Light Lecture 3 [Beyond Classical Observables]
+  * Talk 9: Quantum Information Lecture 4 [Prof. Gabriel Landi]
+    * Subtopic: Correlation/Entropy/Entanglement
+    * Description: 
+  * Talk 10: Open Quantum Systems Lecture 2 [Prof. Doran Raccah]
+    * Subtopic: Stochastic Methods in a Coherent State Basis
+    * Description: 
+  * Talk 11: Open Quantum Systems Lecture 3 [Prof. Ignacio Franco]
+    * Subtopic: HEOM and pytenso
+    * Description: 
+  * Talk 12: Quantum Light Lecture 3 [Prof. Eric Bittner & Prof. Ajay Kandada]
+    * Subtopic: Beyond Classical Observables
+    * Description: 
 
 
 * **Thursday, January 8th**
-  * Talk 13: Quantum Information Lecture 5 [Quantum Metrology]
-  * Talk 14: Quantum Computing Lecture 3 [Introduction to Quantum Circuits]
-  * Talk 15: Open Quantum Systems Lecture 4 [HOPS]
-  * Talk 16: Quantum Computing Lecture 4 [Algorithms for Energy Estimation]
+  * Talk 13: Quantum Information Lecture 5 [Prof. Gabriel Landi]
+    * Subtopic: Quantum Metrology
+    * Description: 
+  * Talk 14: Quantum Computing Lecture 3 [Prof. Kade Head-Marsden]
+    * Subtopic: Introduction to Quantum Circuits
+    * Description: 
+  * Talk 15: Open Quantum Systems Lecture 4 [Prof. Doran Raccah]
+    * Subtopic: HOPS
+    * Description: 
+  * Talk 16: Quantum Computing Lecture 4 [Prof. Kade Head-Marsden]
+    * Subtopic: Algorithms for Energy Estimation
+    * Description: 
 
 ## Repository Contents
+Top-level folders are organized by topic; each topic contains per‑lecture subfolders 
+("Lecture N: Title") with slides, exercises, and notebooks/code. Shared files are 
+stored at the repository root.
 
-* Quantum Information (QI)
-    * Lecture 1: Density Matrices
-        * QI_Lecture_1.pdf
-    * Lecture 2: Quantum Channels
-        * QI_Lecture_2.pdf
-    * Lecture 3: Lindblad Equations
-        * QI_Lecture_3.pdf
-        * QI_Lecture_3_Supplement.pdf
-    * Lecture 4: Correlation-Entropy-Entanglement
-        * QI_Lecture_4.pdf
-        * QI_Lecture_4_Exercises.pdf
-    * Lecture 5: Quantum Metrology
-        * Texas winter school - Using Melt for quantum information.nb
-        * Texas winter school quantum information lecture 5 problem.nb
-        * melt.m
-        * melt.nb
-* Quantum Computing (QC)
-    * Lecture 1: Spin-Spin Decoherence
-        * QC_Lectures_1_and_2.pdf
-        * QC_Lectures_1_and_2_Exercises.pdf
-        * CCE-central-spin-template.ipynb
-    * Lecture 2: Adapting Central Spin Problem
-        * QC_Lectures_1_and_2.pdf
-        * QC_Lectures_1_and_2_Exercises.pdf
-    * Lecture 3: Introduction to Quantum Circuits
-        * QC_Lecture_3.pdf
-        * QC_Lectures_3_and_4_Exercises.pdf
-    * Lecture 4: Algorithms for Energy Estimation
-        * QC_Lecture_4.pdf
-        * QC_Lectures_3_and_4_Exercises.pdf
-* Quantum Light (QL) 
-    * Lecture 1: Intro Non-Linear Optics
-        * QL_Lecture_1.pdf
-        * QL_Lecture_1_PPT.pdf
-    * Lecture 2: Stochastic Processes
-        * QL_Lecture_2.pdf
-    * Lecture 3: Beyond Classical Observables
-        * QL_Lecture_3.pdf
-        * Topology_and_Spectral_Entanglement_in_Cavity_Mediated_Photon_Scattering.pdf
-* Open Quantum Systems (OQS)
-    * Lecture 1: Quantum Master Equations (HEOM)
-        * OQS_Lecture_1_PPT.pdf
-    * Lecture 2: Stochastic Methods in a Coherent State Basis
-        * OQS_Lecture_2.pdf
-        * OQS_Lecture_2_Exercises_v1.pdf
-        * OQS_Lecture_2_Exercises_v2.pdf
-    * Lecture 3: HEOM and pytenso
-        * TENSOTUTORIAL.pptx
-        * laser_example.ipynb
-        * n_ltc_example.ipynb
-        * propagation_scheme.ipynb
-        * structured_spin_boson-1.ipynb
-        * tree_vs_train_example.ipynb
-        * Mapping_Electronic_Decoherence_Pathways_in_Molecules.pdf
-    * Lecture 4: HOPS
-        * OQS_Lecture_4.pdf
-        * OQS_Lecture_4_Slides.key
-        * mesohops_installation_guide.pdf
-        * exercise_absorption.py
-        * exercise_fluorescence.py
-        * exercise_localization.py
-        * exercise_localization_ensemble.py
-        * exercise_trapping.py
+Structure at a glance:
+```
+TexasQuantumWinterSchool/
+├── Topic/
+│   └── Lecture N: Title/
+│       ├── slides/
+│       ├── exercises/
+│       └── notebooks/ or code/
+└── Root files: README.md, LICENSE, TQWS_Background.jpg
+```
 
 ---
 

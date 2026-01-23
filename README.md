@@ -1,105 +1,137 @@
-# Texas Quantum Winter School ❄️⚛️
+# Texas Quantum Winter School
+This repository contains information and materials associated with the **Texas Quantum Winter School**, an intensive educational program focused on open quantum systems and quantum information in the chemical sciences.
 
-Welcome to the **Texas Quantum Winter School** repository!  
-This repository contains information, resources, and materials related to the winter school.
+**Official website:** https://www.texquantum.com
 
-🌐 **Official Website:** https://www.texquantum.com  
-
----
-
-## 📘 About the School
-
-The **Texas Quantum Winter School** is an intensive, week-long educational program focused on **Open Quantum Systems and Quantum Information in the Chemical Sciences**. The school is designed to provide early-career researchers with a strong conceptual and practical foundation at the interface of quantum information science, chemical physics, and quantum dynamics.
-
-📍 **Location:** Wimberley, Texas, USA  
-🗓️ **Date:** January 4–9, 2026  
-
-Supported by the **National Science Foundation (NSF)**, the school emphasizes rigorous training, interdisciplinary dialogue, and hands-on learning in a collaborative environment.
+![TQWS_Background](/TQWS_Background.jpg)
 
 ---
 
-## 🎯 Goals & Objectives
+## Program Description
 
-The Texas Quantum Winter School aims to:
+The **Texas Quantum Winter School** is a week-long school designed to provide early-career researchers with a rigorous introduction to theoretical and computational approaches for open quantum systems, quantum dynamics, and quantum information concepts relevant to chemical physics.
 
-- Bridge the training gap between **quantum information science** and **chemical physics**
-- Develop intuition for **open quantum systems**, decoherence, and dissipation
-- Explore how **quantum coherence and entanglement** act as resources in chemical and physical processes
-- Provide exposure to modern **theoretical and computational tools**
-- Foster collaboration among graduate students, postdocs, and leading researchers
+The program emphasizes foundational theory, practical tools, and close interaction between participants and instructors.
 
----
+- **Location:** Wimberley, Texas, USA  
+- **Dates:** January 4–9, 2026  
 
-## 📚 Program Structure
-
-The program features a combination of:
-
-- **Pedagogical lectures**
-- **Tutorial-style sessions**
-- **Hands-on exercises**
-- **Interactive discussions and problem-solving**
-
-### Core Topics Include:
-- Open quantum systems and quantum dynamics  
-- Quantum information concepts in molecular systems  
-- Noise, dissipation, and decoherence  
-- Quantum light–matter interactions  
-- Computational approaches to quantum dynamics  
-
-A detailed schedule and lecture lineup are available on the official website.
+The school is supported by the **National Science Foundation (NSF)**.
 
 ---
 
-## 👥 Who Should Attend?
+## Lecturers
 
-The winter school is intended for:
+Instruction is provided by researchers with expertise in open quantum systems, quantum information, and chemical physics.
 
-- **Graduate students**
-- **Postdoctoral researchers**
-- Early-career scientists working in:
-  - Chemical physics
-  - Quantum information science
-  - Quantum dynamics
-  - Related theoretical or computational fields
-
-A strong background in quantum mechanics is recommended.
+* Prof. Ignacio Franco (U Rochester) - Open Quantum Systems
+* Prof. Eric Bittner (U Houston) - Quantum Light
+* Prof. Doran Raccah (U Texas, Austin) - Open Quantum Systems
+* Prof. Ajay Kandada (Wake Forrest) - Quantum Light
+* Prof. Gabriel Landi (U Rochester) - Quantum Information
+* Prof. Kade Head-Marsden (U Minnesota) - Quantum Computing
 
 ---
 
-## 🧑‍🏫 Lecturers & Organizers
+## Talk Schedule
 
-The school brings together a diverse group of **leading experts** in quantum information, open quantum systems, and chemical physics. Instruction is designed to be accessible while maintaining high scientific rigor.
+* **Monday, January 5th**
+  * Talk 1: Quantum Information Lecture 1 [Density Matrices]
+  * Talk 2: Quantum Information Lecture 2 [Quantum Channels]
+  * Talk 3: Quantum Computing Lecture 1 [Spin-Spin Decoherence]
+  * Talk 4: Quantum Computing Lecture 2 [Adapting Central Spin Problem]
 
-👉 Please refer to the official website for a full list of lecturers and organizers.
+
+* **Tuesday, January 6th**
+  * Talk 5: Quantum Information Lecture 3 [Lindblad Equations]
+  * Talk 6: Quantum Light Lecture 1 [Intro Non-Linear Optics]
+  * Talk 7: Open Quantum Systems Lecture 1 [Quantum Master Equations (HEOM)]
+  * Talk 8: Quantum Light Lecture 2 [Stochastic Processes]
+
+
+* **Wednesday, January 7th**
+  * Talk 9: Quantum Information Lecture 4 [Correlation/Entropy/Entanglement]
+  * Talk 10: Open Quantum Systems Lecture 2 [Stochastic Methods in a Coherent State Basis]
+  * Talk 11: Open Quantum Systems Lecture 3 [HEOM and pytenso]
+  * Talk 12: Quantum Light Lecture 3 [Beyond Classical Observables]
+
+
+* **Thursday, January 8th**
+  * Talk 13: Quantum Information Lecture 5 [Quantum Metrology]
+  * Talk 14: Quantum Computing Lecture 3 [Introduction to Quantum Circuits]
+  * Talk 15: Open Quantum Systems Lecture 4 [HOPS]
+  * Talk 16: Quantum Computing Lecture 4 [Algorithms for Energy Estimation]
+
+## Repository Contents
+
+* Quantum Information (QI)
+    * Lecture 1: Density Matrices
+        * QI_Lecture_1.pdf
+    * Lecture 2: Quantum Channels
+        * QI_Lecture_2.pdf
+    * Lecture 3: Lindblad Equations
+        * QI_Lecture_3.pdf
+        * QI_Lecture_3_Supplement.pdf
+    * Lecture 4: Correlation-Entropy-Entanglement
+        * QI_Lecture_4.pdf
+        * QI_Lecture_4_Exercises.pdf
+    * Lecture 5: Quantum Metrology
+        * Texas winter school - Using Melt for quantum information.nb
+        * Texas winter school quantum information lecture 5 problem.nb
+        * melt.m
+        * melt.nb
+* Quantum Computing (QC)
+    * Lecture 1: Spin-Spin Decoherence
+        * QC_Lectures_1_and_2.pdf
+        * QC_Lectures_1_and_2_Exercises.pdf
+        * CCE-central-spin-template.ipynb
+    * Lecture 2: Adapting Central Spin Problem
+        * QC_Lectures_1_and_2.pdf
+        * QC_Lectures_1_and_2_Exercises.pdf
+    * Lecture 3: Introduction to Quantum Circuits
+        * QC_Lecture_3.pdf
+        * QC_Lectures_3_and_4_Exercises.pdf
+    * Lecture 4: Algorithms for Energy Estimation
+        * QC_Lecture_4.pdf
+        * QC_Lectures_3_and_4_Exercises.pdf
+* Quantum Light (QL) 
+    * Lecture 1: Intro Non-Linear Optics
+        * QL_Lecture_1.pdf
+        * QL_Lecture_1_PPT.pdf
+    * Lecture 2: Stochastic Processes
+        * QL_Lecture_2.pdf
+    * Lecture 3: Beyond Classical Observables
+        * QL_Lecture_3.pdf
+        * Topology_and_Spectral_Entanglement_in_Cavity_Mediated_Photon_Scattering.pdf
+* Open Quantum Systems (OQS)
+    * Lecture 1: Quantum Master Equations (HEOM)
+        * OQS_Lecture_1_PPT.pdf
+    * Lecture 2: Stochastic Methods in a Coherent State Basis
+        * OQS_Lecture_2.pdf
+        * OQS_Lecture_2_Exercises_v1.pdf
+        * OQS_Lecture_2_Exercises_v2.pdf
+    * Lecture 3: HEOM and pytenso
+        * TENSOTUTORIAL.pptx
+        * laser_example.ipynb
+        * n_ltc_example.ipynb
+        * propagation_scheme.ipynb
+        * structured_spin_boson-1.ipynb
+        * tree_vs_train_example.ipynb
+        * Mapping_Electronic_Decoherence_Pathways_in_Molecules.pdf
+    * Lecture 4: HOPS
+        * OQS_Lecture_4.pdf
+        * OQS_Lecture_4_Slides.key
+        * mesohops_installation_guide.pdf
+        * exercise_absorption.py
+        * exercise_fluorescence.py
+        * exercise_localization.py
+        * exercise_localization_ensemble.py
+        * exercise_trapping.py
 
 ---
 
-## 📝 Registration & Application
+## Contact
 
-Participation typically requires an application.  
-Information about eligibility, deadlines, travel support, and accommodations can be found on the **Registration** page of the official website.
+For additional information, please visit the official website or contact:
 
----
-
-## 📍 Venue
-
-The school is hosted in **Wimberley, Texas**, offering a quiet and scenic setting that encourages focused learning and collaboration.
-
----
-
-## 📬 Contact
-
-For questions or additional information:
-
-📧 **Email:** texasquantumwinterschool@gmail.com  
-🌐 **Website:** https://www.texquantum.com
-
----
-
-## ✨ Acknowledgments
-
-We gratefully acknowledge support from the **National Science Foundation** and the contributions of all lecturers, organizers, and participants who make the Texas Quantum Winter School possible.
-
----
-
-*We look forward to welcoming you to an engaging and immersive experience in quantum science!*
+**Email:** texasquantumwinterschool@gmail.com
